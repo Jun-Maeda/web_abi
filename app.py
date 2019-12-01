@@ -1,4 +1,7 @@
 import requests
 
-response = requests.get('http://zipcloud.ibsnet.co.jp/api/search?zipcode=7830060')
+zip = input('郵便番号を入力してください。')
+
+response = requests.get(f'http://zipcloud.ibsnet.co.jp/api/search?zipcode={zip}')
 print(response.text)
+
